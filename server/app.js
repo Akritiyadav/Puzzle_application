@@ -21,7 +21,7 @@ var nodemailer = require("nodemailer");
  const mongoUrl =
  "mongodb+srv://akritiyadav895:Akriti_1010@cluster0.mcsiymy.mongodb.net/?retryWrites=true&w=majority";
 
-mongoose.connect(mongoUrl, {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: "true"
   })
